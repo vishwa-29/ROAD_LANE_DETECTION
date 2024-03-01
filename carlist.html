@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List of Cars</title>
+<style>
+    /* Styling for the button */
+    .show-list-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .show-list-button:hover {
+        background-color: #85f093;
+        transform: translateY(-3px); /* Move up slightly on hover */
+    }
+
+    /* Styling for the list container */
+    .car-list {
+        display: none; /* Initially hide the list */
+        transition: transform 0.5s ease; /* Slide-in effect */
+    }
+
+    /* Styling for the list of cars */
+    .car-list ul {
+        padding: 0;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+
+    .car-list ul li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #e6f08b;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .car-list ul li:hover {
+        transform: scale(1.05); /* Scale up on hover */
+    }
+</style>
+</head>
+<body>
+
+<h2>Car List</h2>
+
+<button class="show-list-button" onclick="showCarList()">Show Car List</button>
+
+<div class="car-list">
+    <h3>List of Cars</h3>
+    <ul>
+        <li>Toyota</li>
+        <li>Honda</li>
+        <li>Ford</li>
+        <li>Chevrolet</li>
+        <li>Nissan</li>
+    </ul>
+</div>
+
+<script>
+    // Function to show the car list when the button is clicked
+    function showCarList() {
+        var carList = document.querySelector('.car-list');
+        carList.style.display = 'block';
+    }
+</script>
+</body>
+</html>
